@@ -70,7 +70,6 @@ class RoleControllerTest {
     };
   }
 
-  //на неавторизованного пользователя будет ошибка
   @Test
   void shouldForbidAccessToUnauthenticatedRequests() throws Exception {
     this.mockMvc
@@ -78,7 +77,6 @@ class RoleControllerTest {
             .andExpect(status().is4xxClientError());
   }
 
-  //на авторизованного пользователя ответ ок
   @Test
   @WithMockUser(username = "test")
   void shouldReturnListOfRolesForAuthenticatedRequests() {

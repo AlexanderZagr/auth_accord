@@ -37,7 +37,6 @@ public class AuthenticationController {
     public ApiResponse<AuthToken> generateToken(@RequestBody LoginUser loginUser) throws AuthenticationException {
         final User user = userService.findOne(loginUser.getUsername());
 
-        // authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getName(), loginUser.getPassword()));
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginUser.getUsername(), loginUser.getPassword()));
         final String token = jwtTokenUtil.generateToken(user);
 
@@ -48,13 +47,11 @@ public class AuthenticationController {
     @CrossOrigin(origins = "*", allowedHeaders = "*")
     @RequestMapping(value = "/generate-token", method = RequestMethod.GET)
     public ApiResponse<AuthToken> generateTokenGet() throws AuthenticationException {
-       // BCryptPasswordEncoder passwordEncoder;
         LoginUser loginUser=new LoginUser();
         loginUser.setUsername("nata");
         loginUser.setPassword("123456");
         final User user = userService.findOne(loginUser.getUsername());
         System.out.println("!! ["+user.getEmail()+"] = ["+loginUser.getUsername()+"]");
-        //authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(user.getName(), loginUser.getPassword()));
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(loginUser.getUsername(), loginUser.getPassword()));
 
         final String token = jwtTokenUtil.generateToken(user);

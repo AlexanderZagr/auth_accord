@@ -24,9 +24,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.when;
 
-// Don't do the following - the same can be tested with a much faster unit test
-//@WebMvcTest(TmpIdocDepartmentController.class)
-//@ExtendWith(SpringExtension.class)
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -48,7 +46,6 @@ class UserServiceTest {
     testUser.setEmail("test11@gmail.com");
     testUser.setLastName("test");
     testUser.setActive(1);
-   // when(customerRepository.findById(129)).thenReturn(null);
 
     given(this.customerRepository.save(any()))
             .willReturn(testUser);
@@ -57,7 +54,6 @@ class UserServiceTest {
 
     User result = userService.save(cust);
 
-   // System.out.println("1111"+result.getUserId());
     assertEquals(testUser.getEmail(), result.getEmail());
   }
 
