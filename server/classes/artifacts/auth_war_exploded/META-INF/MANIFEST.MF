@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: auth
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Natali
+Implementation-Vendor-Id: com.jwt
+Created-By: IntelliJ IDEA
+Build-Jdk: 13.0.1
+Main-Class: ${start-class}
+
