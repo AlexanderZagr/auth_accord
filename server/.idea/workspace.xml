@@ -92,7 +92,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1588181106617" />
     <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Auth_acccord_test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -264,6 +264,7 @@
       <workItem from="1624963431353" duration="2298000" />
       <workItem from="1624973187404" duration="42000" />
       <workItem from="1624989450513" duration="352000" />
+      <workItem from="1625040036197" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="1.0">
       <created>1588180037774</created>
